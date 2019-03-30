@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>个人博客</title>
+  
+  <subtitle>TE or not TE</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://xianguangtao.github.io/"/>
+  <updated>2019-03-30T14:47:37.966Z</updated>
+  <id>https://xianguangtao.github.io/</id>
+  
+  <author>
+    <name>鲜光涛</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="https://xianguangtao.github.io/2019/03/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://xianguangtao.github.io/2019/03/28/我的第一篇博客/</id>
+    <published>2019-03-28T12:40:48.000Z</published>
+    <updated>2019-03-30T14:47:37.966Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h1 id="markdown语法"><a href="#markdown语法" class="headerlink" title="markdown语法"></a>markdown语法</h1><h2 id="标题语法（两种形式）"><a href="#标题语法（两种形式）" class="headerlink" title="标题语法（两种形式）"></a>标题语法（两种形式）</h2><p>1.使用=和-标记一级标题和二级标题<br>一级标题<br>=<br>二级标题<br>-</p><p>2.使用#可以表示1-6级标题</p><p>#第一级</p><p>##第二级</p><p>###第三极</p><p>####第四级</p><p>#####第五级</p><p>######第六级<br><strong>注意：在MarkdownPad中，标题文字和#之间不用隔一个空格生成效果也是标题，但是使用hexo部署浏览就需要隔一个空格才有标题效果</strong></p><h2 id="段落语法"><a href="#段落语法" class="headerlink" title="段落语法"></a>段落语法</h2><p>段落后加两个空格回车强制分隔段落<br>示例：<br>我是段落一<br>我是段落二</p><h2 id="区块引用语法"><a href="#区块引用语法" class="headerlink" title="区块引用语法"></a>区块引用语法</h2><h3 id="在段落的每行或者第一行使用符号-gt-，还可嵌套引用"><a href="#在段落的每行或者第一行使用符号-gt-，还可嵌套引用" class="headerlink" title="在段落的每行或者第一行使用符号&gt;，还可嵌套引用"></a>在段落的每行或者第一行使用符号&gt;，还可嵌套引用</h3><p>如：  </p><blockquote><p>今天天气很好    –鲁迅说的</p><blockquote><p>这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，</p><blockquote><p>不玩了  –朱自清</p><blockquote><p>.  –李白</p><blockquote><p>杜甫</p></blockquote></blockquote></blockquote></blockquote></blockquote><h3 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h3><h4 id="普通代码区块标记"><a href="#普通代码区块标记" class="headerlink" title="普通代码区块标记"></a>普通代码区块标记</h4><p>代码区块是在每行加上4个空格或者一个制表符</p><blockquote><p>注意：需要和普通段落之间存在空行</p></blockquote><pre><code>print &quot;hello world&quot;system.out.println(&quot;hello world&quot;);</code></pre><h4 id="高亮代码区块标记"><a href="#高亮代码区块标记" class="headerlink" title="高亮代码区块标记"></a>高亮代码区块标记</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def save_image(image):</span><br><span class="line">    temp_name = tempfile.mktemp(prefix=&apos;tess_&apos;)</span><br><span class="line">    if isinstance(image, str):</span><br><span class="line">        return temp_name, realpath(normpath(normcase(image)))</span><br><span class="line"></span><br><span class="line">    image = prepare(image)</span><br><span class="line">    img_extension = image.format</span><br><span class="line">    if image.format not in &#123;&apos;JPEG&apos;, &apos;PNG&apos;, &apos;TIFF&apos;, &apos;BMP&apos;, &apos;GIF&apos;&#125;:</span><br><span class="line">        img_extension = &apos;PNG&apos;</span><br><span class="line"></span><br><span class="line">    if not image.mode.startswith(RGB_MODE):</span><br><span class="line">        image = image.convert(RGB_MODE)</span><br><span class="line"></span><br><span class="line">    if &apos;A&apos; in image.getbands():</span><br><span class="line">        # discard and replace the alpha channel with white background</span><br><span class="line">        background = Image.new(RGB_MODE, image.size, (255, 255, 255))</span><br><span class="line">        background.paste(image, (0, 0), image)</span><br><span class="line">        image = background</span><br><span class="line"></span><br><span class="line">    input_file_name = temp_name + os.extsep + img_extension</span><br><span class="line">    image.save(input_file_name, format=img_extension, **image.info)</span><br><span class="line">    return temp_name, input_file_name</span><br></pre></td></tr></table></figure><h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><h3 id="在强调内容两侧分别加上-或-，如："><a href="#在强调内容两侧分别加上-或-，如：" class="headerlink" title="在强调内容两侧分别加上*或_，如："></a>在强调内容两侧分别加上*或_，如：</h3><p><em>斜体</em>，_斜体_<br><strong>加粗</strong>，<strong>加粗</strong></p><h2 id="列表（有序，无序）"><a href="#列表（有序，无序）" class="headerlink" title="列表（有序，无序）"></a>列表（有序，无序）</h2><blockquote><p>使用+或-标记无序列表</p></blockquote><ul><li>第一项</li><li>第二项</li></ul><ul><li>第三项</li><li>第四项</li></ul><ul><li>第五项</li><li>第六项</li></ul><blockquote><p>使用数字+”.”标记有序列表</p></blockquote><ol><li>第一段</li><li>第二段</li><li>第三段</li><li>第四段</li><li>第五段</li><li>第六段</li></ol><p><strong>注意：标记后面至少有一个空格或者制表符，若不在引用区块中，必须和前方段落之前存在空行</strong></p><h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>常用分割线(网上说可以用-=*_,但是在我的markdown中不支持=,不知道是为什么)</p><hr><hr><hr><p>===</p><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接可以由两种形式生成，<strong>行内式</strong>和<strong>参考式</strong><br>行内式<br><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a><br>自动生成链接<a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a><br>参考式<br>[百度][1]<br>[1]:<a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a>  </p><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>图片添加和链接相似，只是在链接的基础上前方加一个！号<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up"></p><h2 id="反斜杠’-‘和符号"><a href="#反斜杠’-‘和符号" class="headerlink" title="反斜杠’/‘和符号"></a>反斜杠’/‘和符号<code></code></h2><p><code></code>的用法是标记，如<br><code>ctrl-v</code><br>反斜杠应该是转义，但是没有看到具体用法，等后面研究一下</p><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>第一个表头 | 第二个表头  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;markdown语法&quot;&gt;&lt;a href=&quot;#markdown语法&quot; class=&quot;headerlink&quot; title=&quot;markdown语法&quot;&gt;&lt;/a&gt;markdown语法&lt;/h1&gt;&lt;h2 id=&quot;标题语法（两种形式）&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+      <category term="markdown语法" scheme="https://xianguangtao.github.io/categories/markdown%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="markdown" scheme="https://xianguangtao.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+</feed>
