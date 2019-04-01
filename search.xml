@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用Hexo + GitHub Pages搭建个人博客]]></title>
+    <url>%2F2019%2F03%2F31%2F%E4%BD%BF%E7%94%A8Hexo-Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[想搭建个人博客的想法从毕业一直拖到了到现在，看来真的是拖延症晚期了（哭笑.jpg），原因主要是因为自己编码能力比较菜，加上工作后都比较忙，所以之前一直想搭建个人博客的想法一直没有实施起来，之前听过一个开发朋友说起GitHub Pages可以很方便的搭建个人博客，最近终于有时间来鼓捣一下，利用业余时间总算是弄出来了，我也是一个有个人博客的人啦啦啦(啦啦啦.jpg)，想着写博客的主要目的还是总结，所以把这搭建博客的过程也总结一下吧 HexoHexo简介Hexo是一个快速、简洁且高效的博客框架。可以方便的生成静态网页托管在GitHub和Coding上，搭建个人博客简直不要太方便有没有，。大家可以进入Hexo官网进行详细查看，有详细的中文文档。 关于安装Hexo官网有很简单明了的安装指导，我就不再重复了，直接戳这里。安装步骤完成后，就可以先在本地建站了。 还是按照官网的建站步骤，原谅我实在太懒了（无奈.jpg） 可以在命令行输入下面命令看看效果了 hexo generate #生成静态文件，可以简写成hexo ghexo server #启动服务器。默认情况下，访问网址为： http://localhost:4000/，可以简写成hexo s 然后你访问http://localhost:4000/就可以看到下面的效果图然后我们就可以愉快的进行下一步啦 GitHub Pages GitHub Pages功能依赖于github账号，如果你没有的话，那还等什么，先去官网注册一个： 创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。 生成ssh添加到GitHub git config –global user.name “yourname”git config –global user.email “youremail” 创建ssh，一路回车 ssh-keygen -t rsa -C “youremail” 这节后续补充 部署到GitHub选择主题如果你不喜欢hexo的默认主题，那也没有关系，hexo是可以更换主题的这里有多种主题风格供你选择，我用的是next，看上去简洁清爽， 自定义主题主题配置language 未完待续]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的第一篇博客]]></title>
     <url>%2F2019%2F03%2F28%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[markdown语法标题语法（两种形式）1.使用=和-标记一级标题和二级标题一级标题=二级标题- 2.使用#可以表示1-6级标题 #第一级 ##第二级 ###第三极 ####第四级 #####第五级 ######第六级注意：在MarkdownPad中，标题文字和#之间不用隔一个空格生成效果也是标题，但是使用hexo部署浏览就需要隔一个空格才有标题效果 段落语法段落后加两个空格回车强制分隔段落示例：我是段落一我是段落二 区块引用语法在段落的每行或者第一行使用符号&gt;，还可嵌套引用如： 今天天气很好 –鲁迅说的 这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段，这是下一段， 不玩了 –朱自清 . –李白 杜甫 代码区块普通代码区块标记代码区块是在每行加上4个空格或者一个制表符 注意：需要和普通段落之间存在空行 print &quot;hello world&quot; system.out.println(&quot;hello world&quot;); 高亮代码区块标记1234567891011121314151617181920212223def save_image(image): temp_name = tempfile.mktemp(prefix=&apos;tess_&apos;) if isinstance(image, str): return temp_name, realpath(normpath(normcase(image))) image = prepare(image) img_extension = image.format if image.format not in &#123;&apos;JPEG&apos;, &apos;PNG&apos;, &apos;TIFF&apos;, &apos;BMP&apos;, &apos;GIF&apos;&#125;: img_extension = &apos;PNG&apos; if not image.mode.startswith(RGB_MODE): image = image.convert(RGB_MODE) if &apos;A&apos; in image.getbands(): # discard and replace the alpha channel with white background background = Image.new(RGB_MODE, image.size, (255, 255, 255)) background.paste(image, (0, 0), image) image = background input_file_name = temp_name + os.extsep + img_extension image.save(input_file_name, format=img_extension, **image.info) return temp_name, input_file_name 强调在强调内容两侧分别加上*或_，如：斜体，_斜体_加粗，加粗 列表（有序，无序） 使用+或-标记无序列表 第一项 第二项 第三项 第四项 第五项 第六项 使用数字+”.”标记有序列表 第一段 第二段 第三段 第四段 第五段 第六段 注意：标记后面至少有一个空格或者制表符，若不在引用区块中，必须和前方段落之前存在空行 分割线常用分割线(网上说可以用-=*_,但是在我的markdown中不支持=,不知道是为什么) === 链接链接可以由两种形式生成，行内式和参考式行内式百度自动生成链接https://www.baidu.com参考式[百度][1][1]:https://www.baidu.com 图片图片添加和链接相似，只是在链接的基础上前方加一个！号 反斜杠’/‘和符号的用法是标记，如ctrl-v反斜杠应该是转义，但是没有看到具体用法，等后面研究一下 表格第一个表头 | 第二个表头]]></content>
